@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "CVAT 3D Point Booster",
+  "version": "1.4",
+  "description": "Phóng to, làm sáng và tô màu điểm theo khoảng cách, bảng tham chiếu L×W×H theo class trong CVAT 3D",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://cvat.edufun.ai/*",
+        "http://localhost:8080/*",
+        "http://127.0.0.1:8080/*"
+      ],
+      "js": ["inject.js"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": true
+    }
+  ]
+}
